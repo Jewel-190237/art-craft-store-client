@@ -11,9 +11,11 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            {
-                arts.map(art => <ArtCard key={art._id} art ={art}></ArtCard>)
-            }
+            <div className="grid md:grid-cols-3 grid-cols-1">
+                {
+                    arts.map(art => <ArtCard key={art._id} art={art}></ArtCard>)
+                }
+            </div>
         </div>
     );
 };

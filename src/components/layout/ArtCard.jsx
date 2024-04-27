@@ -1,9 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-const ArtCard = ({art}) => {
-    const {_id} = art;
-    const { product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = art
+import { Link } from "react-router-dom";
+
+const ArtCard = ({ art }) => {
+    
+    const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = art
+
+    const handleDetails = id => {
+
+    }
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -18,7 +24,9 @@ const ArtCard = ({art}) => {
                         <div className="badge badge-outline">Rating: {rating}</div>
                         <div className="badge badge-outline">Stock Status: {stock_status}</div>
                     </div>
-                    <button className="btn">View Details</button>
+                    <Link to={`/artDetails/${_id}`}>
+                        <button className="btn btn-block bg-green-700 text-white">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

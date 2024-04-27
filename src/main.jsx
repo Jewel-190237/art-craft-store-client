@@ -44,8 +44,8 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/artDetails',
-        element: <ArtDetails></ArtDetails>,
+        path: '/artDetails/:id',
+        element: <PrivateRoute><ArtDetails></ArtDetails></PrivateRoute>
       },
       {
         path: '/profile',

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { authContext } from "../provider/AuthProvider";
+import MyCurtDetails from "./MyCurtDetails";
 
 const MyCurt = () => {
 
@@ -15,33 +16,15 @@ const MyCurt = () => {
             })
     }, [])
     return (
+        
         <div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Category</th>
-                            <th><button>Action</button></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            arts.map(art => <tr key={art._id}>
-                                <th></th>
-                                <th>{art.user_name}</th>
-                                <th>{art.email}</th>
-                                <th>Category</th>
-                                <th><button>Delete</button></th>
-                            </tr>)
-
-                        }
-                    </tbody>
-                </table>
+            <h2 className="text-3xl text-center">My curt section</h2>
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+                {
+                    arts.map(art => <MyCurtDetails key={art._id} art={art}></MyCurtDetails>)
+                }
             </div>
+            
         </div>
     );
 };

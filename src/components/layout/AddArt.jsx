@@ -12,7 +12,7 @@ const AddArt = () => {
 
     console.log(email)
     
-    const handleAddCoffee = event => {
+    const handleAddArt = event => {
         event.preventDefault()
         const form = event.target;
 
@@ -52,9 +52,9 @@ const AddArt = () => {
     }
     return (
         <div>
-            <div className="bg-[#F4F3F0]">
-                <h2 className="text-4xl">Add a New Coffee</h2>
-                <form onSubmit={handleAddCoffee}>
+            <div className="bg-[#F4F3F0] rounded-xl">
+                <h2 className="text-4xl text-center p-4">Add a New Coffee</h2>
+                <form onSubmit={handleAddArt}>
                     <div className="md:flex gap-4 mb-4 ">
                         <div className="form-control md:w-1/2">
                             <span className="label-text">Name</span>
@@ -88,7 +88,11 @@ const AddArt = () => {
                     <div className="md:flex gap-4 mb-4">
                         <div className="form-control md:w-1/2">
                             <span className="label-text">Stock Status</span>
-                            <input type="text" name="stock_status" placeholder="Enter Stock Status" className="input input-bordered w-full" />
+                            <select className='input input-bordered w-full' name="stock_status" id="">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            {/* <input type="text" placeholder="Enter Stock Status" className="" /> */}
                         </div>
                         <div className="form-control md:w-1/2">
                             <span className="label-text">Description</span>

@@ -56,8 +56,9 @@ const router = createBrowserRouter([
         element: <PrivateRoute> <AddArt></AddArt> </PrivateRoute>,
       },
       {
-        path: '/UpdateArt',
+        path: '/UpdateArt/:id',
         element: <PrivateRoute> <UpdateArt></UpdateArt> </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/arts/${params.id}`)
       },
     ]
   },

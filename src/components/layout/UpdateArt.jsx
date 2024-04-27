@@ -1,97 +1,121 @@
 /* eslint-disable no-unused-vars */
-// import { useLoaderData } from "react-router-dom";
-// import 'sweetalert2/src/sweetalert2.scss'
-// import Swal from 'sweetalert2/dist/sweetalert2.js'
-// import 'sweetalert2/src/sweetalert2.scss'
+import 'sweetalert2/src/sweetalert2.scss'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+
+import { useLoaderData } from "react-router-dom";
 
 const UpdateArt = () => {
 
-    // const coffee = useLoaderData()
-    // const { _id, name, chef, supplier, taste, category, details, photoUrl } = coffee;
-    const handleUpdateCoffee = event => {
+    const arts = useLoaderData()
+    console.log(arts)
+
+    const { _id,product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = arts
+
+    console.log(_id,product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url)
+
+    const handleUpdateArt = event => {
         event.preventDefault()
         const form = event.target;
 
-        const name = form.name.value;
-        const chef = form.chef.value;
-        const supplier = form.supplier.value;
-        const taste = form.taste.value;
-        const category = form.category.value;
-        const details = form.details.value;
-        const photoUrl = form.photoUrl.value;
+        const product_name = form.product_name.value;
+        const sub_category_name = form.sub_category_name.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const customization = form.customization.value;
+        const processing_time = form.processing_time.value;
+        const stock_status = form.stock_status.value;
+        const description = form.description.value;
+        const user_name = form.user_name.value;
+        const user_email = form.user_email.value;
+        const photo_url = form.photo_url.value;
 
-        const newCoffee = { name, chef, supplier, taste, category, details, photoUrl }
-        console.log(newCoffee)
+        const newArt = { product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url }
+        
+        console.log(newArt)
 
-        // fetch(`http://localhost:4000/coffee/${_id}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newCoffee)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         Swal.fire({
-        //             title: "Do you want to save the changes?",
-        //             showDenyButton: true,
-        //             showCancelButton: true,
-        //             confirmButtonText: "Save",
-        //             denyButtonText: `Don't save`
-        //         }).then((result) => {
-        //             /* Read more about isConfirmed, isDenied below */
-        //             if (result.isConfirmed) {
-        //                 Swal.fire("Saved!", "", "success");
-        //             } else if (result.isDenied) {
-        //                 Swal.fire("Changes are not saved", "", "info");
-        //             }
-        //         });
+        fetch(`http://localhost:5000/update_art/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newArt)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                Swal.fire({
+                    icon: "success",
+                    title: "Art Added Successfully",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
 
-        //     })
+            })
     }
+
     return (
         <div>
             <div className="bg-[#F4F3F0]">
-                <h2 className="text-4xl">Update Art</h2>
-                <form onSubmit={handleUpdateCoffee}>
-                    <div className="md:flex gap-4 mb-8 ">
+                <h2 className="text-4xl">Update an art</h2>
+                <form onSubmit={handleUpdateArt}>
+                    <div className="md:flex gap-4 mb-4 ">
                         <div className="form-control md:w-1/2">
                             <span className="label-text">Name</span>
-                            <input type="text" name="name" placeholder="Enter Coffee Name" className="input input-bordered w-full" />
+                            <input type="text" name="product_name" placeholder="Enter Product Name" className="input input-bordered w-full" />
                         </div>
                         <div className="form-control md:w-1/2">
-                            <span className="label-text">Chef</span>
-                            <input type="text" name="chef"  placeholder="Enter Coffee Chef" className="input input-bordered w-full" />
+                            <span className="label-text">Sub Category Name</span>
+                            <input type="text" name="sub_category_name" placeholder="Enter Sub Category Name" className="input input-bordered w-full" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-8">
+                    <div className="md:flex gap-4 mb-4">
                         <div className="form-control md:w-1/2">
-                            <span className="label-text">Supplier</span>
-                            <input type="text" name="supplier"  placeholder="Enter Coffee Supplier" className="input input-bordered w-full" />
+                            <span className="label-text">Price</span>
+                            <input type="number" name="price" placeholder="Enter product Price" className="input input-bordered w-full" />
                         </div>
                         <div className="form-control md:w-1/2">
-                            <span className="label-text">Taste</span>
-                            <input type="text" name="taste"  placeholder="Enter Coffee Taste" className="input input-bordered w-full" />
-                        </div>
-                    </div>
-                    <div className="md:flex gap-4 mb-8">
-                        <div className="form-control md:w-1/2">
-                            <span className="label-text">Category</span>
-                            <input type="text" name="category"  placeholder="Enter Coffee Supplier" className="input input-bordered w-full" />
-                        </div>
-                        <div className="form-control md:w-1/2">
-                            <span className="label-text">Details</span>
-                            <input type="text" name="details" placeholder="Enter Coffee Taste" className="input input-bordered w-full" />
+                            <span className="label-text">Rating</span>
+                            <input type="number" name="rating" placeholder="Enter product rating" className="input input-bordered w-full" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-8 ">
+                    <div className="md:flex gap-4 mb-4">
+                        <div className="form-control md:w-1/2">
+                            <span className="label-text">customization</span>
+                            <input type="text" name="customization" placeholder="Enter customization Yes/No" className="input input-bordered w-full" />
+                        </div>
+                        <div className="form-control md:w-1/2">
+                            <span className="label-text">Processing time</span>
+                            <input type="text" name="processing_time" placeholder="Enter processing Time" className="input input-bordered w-full" />
+                        </div>
+                    </div>
+                    <div className="md:flex gap-4 mb-4">
+                        <div className="form-control md:w-1/2">
+                            <span className="label-text">Stock Status</span>
+                            <input type="text" name="stock_status" placeholder="Enter Stock Status" className="input input-bordered w-full" />
+                        </div>
+                        <div className="form-control md:w-1/2">
+                            <span className="label-text">Description</span>
+                            <input type="text" name="description" placeholder="Enter short description" className="input input-bordered w-full" />
+                        </div>
+                    </div>
+                    <div className="md:flex gap-4 mb-4">
+                        <div className="form-control md:w-1/2">
+                            <span className="label-text">User Name</span>
+                            <input type="text" name="user_name" placeholder="Enter user name" className="input input-bordered w-full" />
+                        </div>
+                        <div className="form-control md:w-1/2">
+                            <span className="label-text">Email</span>
+                            <input type="email" name="user_email" placeholder="Enter email address" className="input input-bordered w-full" />
+                        </div>
+                    </div>
+                    <div className="md:flex gap-4 mb-4 ">
                         <div className="form-control w-full">
-                            <span className="label-text">Photo</span>
-                            <input type="text" name="photoUrl"  placeholder="Enter Coffee Supplier" className="input input-bordered w-full" />
+                            <span className="label-text">Photo url</span>
+                            <input type="text" name="photo_url" placeholder="Enter Photo url" className="input input-bordered w-full" />
                         </div>
                     </div>
-                    <input className="btn btn-block bg-[#331A15] mb-8" type="submit" value="Update Art" />
+                    <input className="btn btn-block bg-[#331A15] text-white mb-8" type="submit" value="Update Art" />
                 </form>
             </div>
         </div>

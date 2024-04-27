@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { authContext } from "../provider/AuthProvider";
@@ -123,14 +123,17 @@ const Login = () => {
                             <div>
                                 <p className="text-center"> or</p>
                             </div>
-                            <div className=" flex">
-                                <p>
-                                    <button onClick={handlesSignInWithGoogle} className="btn btn-outline ml-4 btn-success">Google</button>
-                                </p>
-                                <p>
-                                    <button onClick={handlesSignInWithGitHub} className="btn btn-outline ml-4 btn-success">GitHub</button>
-                                </p>
+                            <div>
+                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-full my-2">
+                                    <FaGoogle></FaGoogle>
+                                    Update
+                                </button>
+                                <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-full">
+                                    <FaGithub></FaGithub>
+                                    gitHub
+                                </button>
                             </div>
+                            
                             <div>
                                 <p>New Here ? please <Link to='/register'>
                                     <button className="btn btn-outline btn-success">Register</button>

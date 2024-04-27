@@ -4,6 +4,7 @@
 import { Link } from "react-router-dom";
 
 const ArtCard = ({ art }) => {
+
     
     const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = art
 

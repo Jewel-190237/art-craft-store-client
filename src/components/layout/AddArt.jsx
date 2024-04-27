@@ -3,8 +3,11 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import { useContext } from 'react';
 import { authContext } from '../provider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const AddArt = () => {
+
+    const navigate = useNavigate()
 
     const  { user } = useContext(authContext);
 
@@ -47,6 +50,8 @@ const AddArt = () => {
                     showConfirmButton: false,
                     timer: 2000
                   });
+
+                  navigate('/myCurt')
 
             })
     }

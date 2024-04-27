@@ -12,7 +12,7 @@ const MyCurt = () => {
             .then(res => res.json())
             .then(data => {
                 setArts(data)
-                console.log(data)
+                // console.log(data)
             })
     }, [])
     return (

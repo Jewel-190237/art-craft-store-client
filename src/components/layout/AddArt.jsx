@@ -1,8 +1,17 @@
 import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import { useContext } from 'react';
+import { authContext } from '../provider/AuthProvider';
+
 const AddArt = () => {
 
+    const  { user } = useContext(authContext);
+
+    const email = user.email;
+
+    console.log(email)
+    
     const handleAddCoffee = event => {
         event.preventDefault()
         const form = event.target;
@@ -19,7 +28,7 @@ const AddArt = () => {
         const user_email = form.user_email.value;
         const photo_url = form.photo_url.value;
 
-        const newArt = { product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url }
+        const newArt = { email, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url }
         console.log(newArt)
 
         fetch('http://localhost:5000/arts', {
@@ -34,7 +43,7 @@ const AddArt = () => {
                 console.log(data)
                 Swal.fire({
                     icon: "success",
-                    title: "Your work has been saved",
+                    title: "Art Added Successfully",
                     showConfirmButton: false,
                     timer: 2000
                   });

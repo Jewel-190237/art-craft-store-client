@@ -7,9 +7,6 @@ const ArtCard = ({ art }) => {
     
     const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = art
 
-    const handleDetails = id => {
-
-    }
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">

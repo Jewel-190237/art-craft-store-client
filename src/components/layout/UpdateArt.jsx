@@ -10,9 +10,9 @@ const UpdateArt = () => {
     const arts = useLoaderData()
     console.log(arts)
 
-    const { _id,product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = arts
+    const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = arts
 
-    console.log(_id,product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url)
+    console.log(_id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url)
 
     const handleUpdateArt = event => {
         event.preventDefault()
@@ -31,7 +31,7 @@ const UpdateArt = () => {
         const photo_url = form.photo_url.value;
 
         const newArt = { product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url }
-        
+
         console.log(newArt)
 
         fetch(`http://localhost:5000/update_art/${_id}`, {
@@ -56,66 +56,77 @@ const UpdateArt = () => {
 
     return (
         <div>
-            <div className="bg-[#F4F3F0]">
-                <h2 className="text-4xl">Update an art</h2>
+            <div className="bg-[#F4F3F0] rounded-xl">
+                <h2 className="text-4xl text-center p-4">Update an art</h2>
                 <form onSubmit={handleUpdateArt}>
-                    <div className="md:flex gap-4 mb-4 ">
-                        <div className="form-control md:w-1/2">
+                    <div className="md:flex gap-4 ">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Name</span>
-                            <input type="text" name="product_name" placeholder="Enter Product Name" className="input input-bordered w-full" />
+                            <input type="text" name="product_name" placeholder="Enter Product Name" className="input input-bordered w-full input-success" />
                         </div>
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Sub Category Name</span>
-                            <input type="text" name="sub_category_name" placeholder="Enter Sub Category Name" className="input input-bordered w-full" />
+                            <select className='input input-bordered w-full input-success' name="sub_category_name" id="">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">B</option>
+                                <option value="D">D</option>
+                            </select>
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4">
-                        <div className="form-control md:w-1/2">
+                    <div className="md:flex gap-4 ">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Price</span>
-                            <input type="number" name="price" placeholder="Enter product Price" className="input input-bordered w-full" />
+                            <input type="number" name="price" placeholder="Enter product Price" className="input input-bordered w-full input-success" />
                         </div>
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Rating</span>
-                            <input type="number" name="rating" placeholder="Enter product rating" className="input input-bordered w-full" />
+                            <input type="number" name="rating" placeholder="Enter product rating" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4">
-                        <div className="form-control md:w-1/2">
-                            <span className="label-text">customization</span>
-                            <input type="text" name="customization" placeholder="Enter customization Yes/No" className="input input-bordered w-full" />
+                    <div className="md:flex gap-4">
+                        <div className="form-control md:w-1/2 p-4">
+                            <span className="label-text">Customization</span>
+                            <select className='input input-bordered w-full input-success' name="customization" id="">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
                         </div>
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Processing time</span>
-                            <input type="text" name="processing_time" placeholder="Enter processing Time" className="input input-bordered w-full" />
+                            <input type="time" name="processing_time" placeholder="Enter processing Time" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4">
-                        <div className="form-control md:w-1/2">
+                    <div className="md:flex gap-4 ">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Stock Status</span>
-                            <input type="text" name="stock_status" placeholder="Enter Stock Status" className="input input-bordered w-full" />
+                            <select className='input input-bordered w-full input-success' name="stock_status" id="">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
                         </div>
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Description</span>
-                            <input type="text" name="description" placeholder="Enter short description" className="input input-bordered w-full" />
+                            <input type="text" name="description" placeholder="Enter short description" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4">
-                        <div className="form-control md:w-1/2">
+                    <div className="md:flex gap-4">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">User Name</span>
-                            <input type="text" name="user_name" placeholder="Enter user name" className="input input-bordered w-full" />
+                            <input type="text" name="user_name" placeholder="Enter user name" className="input input-bordered w-full input-success" />
                         </div>
-                        <div className="form-control md:w-1/2">
+                        <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Email</span>
-                            <input type="email" name="user_email" placeholder="Enter email address" className="input input-bordered w-full" />
+                            <input type="email" name="user_email" placeholder="Enter email address" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4 ">
-                        <div className="form-control w-full">
+                    <div className="md:flex gap-4 ">
+                        <div className="form-control w-full p-4">
                             <span className="label-text">Photo url</span>
-                            <input type="text" name="photo_url" placeholder="Enter Photo url" className="input input-bordered w-full" />
+                            <input type="url" name="photo_url" placeholder="Enter Photo url" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <input className="btn btn-block bg-[#331A15] text-white mb-8" type="submit" value="Update Art" />
+                    <input className="btn btn-block bg-[#331A15] text-white input-success mb-8" type="submit" value="Update Art" />
                 </form>
             </div>
         </div>

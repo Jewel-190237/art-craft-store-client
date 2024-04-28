@@ -138,8 +138,8 @@ const Login = () => {
                             <div>
                                 <p className="text-center">New Here ? please </p>
                                 <Link to='/register'>
-                                    <button className="btn btn-outline w-full">
-                                        <TiUserAdd className="text-2xl"></TiUserAdd>
+                                    <button className="btn btn-outline w-full mt-2">
+                                        <TiUserAdd className="text-xl"></TiUserAdd>
                                         Register
                                     </button>
                                 </Link>

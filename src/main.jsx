@@ -19,6 +19,7 @@ import AuthProvider from './components/provider/AuthProvider';
 import AddArt from './components/layout/AddArt';
 import UpdateArt from './components/layout/UpdateArt';
 import ArtDetails from './components/layout/ArtDetails';
+import AllArts from './components/layout/AllArts';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/arts')
+      },
+      {
+        path: '/allArts',
+        element: <AllArts></AllArts>,
         loader: () => fetch('http://localhost:5000/arts')
       },
       {
@@ -54,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: '/addArt',
         element: <PrivateRoute> <AddArt></AddArt> </PrivateRoute>,
-      },
+      },  
       {
         path: '/UpdateArt/:id',
         element: <PrivateRoute> <UpdateArt></UpdateArt> </PrivateRoute>,

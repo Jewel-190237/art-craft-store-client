@@ -34,33 +34,35 @@ const UpdateArt = () => {
 
         console.log(newArt)
 
-        fetch(`http://localhost:5000/update_art/${_id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newArt)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                Swal.fire({
-                    title: "Do you want to save the changes?",
-                    showDenyButton: true,
-                    showCancelButton: true,
-                    confirmButtonText: "Save",
-                    denyButtonText: `Don't save`
-                }).then((result) => {
-                    /* Read more about isConfirmed, isDenied below */
-                    if (result.isConfirmed) {
-                        Swal.fire("Saved!", "", "success");
-                    } else if (result.isDenied) {
-                        Swal.fire("Changes are not saved", "", "info");
-                    }
-                });
-                navigate('/myCurt')
 
-            })
+        Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/update_art/${_id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(newArt)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+                Swal.fire("Saved!", "", "success");
+                navigate('/myCurt')
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+        });
+
+
     }
 
     return (
@@ -76,10 +78,12 @@ const UpdateArt = () => {
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Sub Category Name</span>
                             <select className='input input-bordered w-full input-success' defaultValue={sub_category_name} name="sub_category_name" id="">
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">B</option>
-                                <option value="D">D</option>
+                                <option value="Clay-made pottery">Clay-made pottery</option>
+                                <option value="Stoneware">Stoneware</option>
+                                <option value="Porcelain">Porcelain</option>
+                                <option value="Terra Cotta">Terra Cotta</option>
+                                <option value="Ceramics & Architectural">Ceramics & Architectural</option>
+                                <option value="Home decor pottery">Home decor pottery</option>
                             </select>
                         </div>
                     </div>

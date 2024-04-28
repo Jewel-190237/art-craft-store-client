@@ -20,13 +20,14 @@ const Header = () => {
             <li><NavLink to='/myCurt'>My Curt</NavLink></li>
         </>
         }
+        <li><NavLink to='/allArts'>All Arts</NavLink></li>
         <li><NavLink to='/contact'>Contact Us</NavLink></li>
         
     </>
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-[#F4F3F0] rounded-xl mb-8">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

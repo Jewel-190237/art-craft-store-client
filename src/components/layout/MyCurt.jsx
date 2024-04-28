@@ -4,8 +4,8 @@ import MyCurtDetails from "./MyCurtDetails";
 
 const MyCurt = () => {
 
-    const { user } = useContext(authContext)
-    const [arts, setArts] = useState([])
+    const { user } = useContext(authContext);
+    const [arts, setArts] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/myCurt/${user.email}`)

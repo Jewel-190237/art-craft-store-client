@@ -2,6 +2,8 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
+import { TiUserAdd } from "react-icons/ti";
+
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { authContext } from "../provider/AuthProvider";
@@ -121,24 +123,26 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <div>
-                                <p className="text-center"> or</p>
+                                <p className="text-center"> or <br /> Continue with</p>
                             </div>
                             <div>
                                 <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-full my-2">
                                     <FaGoogle></FaGoogle>
-                                    Update
+                                    Google
                                 </button>
                                 <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-full">
                                     <FaGithub></FaGithub>
                                     gitHub
                                 </button>
                             </div>
-                            
                             <div>
-                                <p>New Here ? please <Link to='/register'>
-                                    <button className="btn btn-outline btn-success">Register</button>
-                                </Link> </p>
-
+                                <p className="text-center">New Here ? please </p>
+                                <Link to='/register'>
+                                    <button className="btn btn-outline w-full">
+                                        <TiUserAdd className="text-2xl"></TiUserAdd>
+                                        Register
+                                    </button>
+                                </Link>
                             </div>
                         </form>
                     </div>

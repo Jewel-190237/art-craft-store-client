@@ -13,7 +13,7 @@ const AddArt = () => {
 
     const email = user.email;
 
-    console.log(email)
+    console.log(user)
     
     const handleAddArt = event => {
         event.preventDefault()
@@ -58,7 +58,7 @@ const AddArt = () => {
     return (
         <div>
             <div className="bg-[#F4F3F0] rounded-xl">
-                <h2 className="text-4xl text-center p-4">Add a New Coffee</h2>
+                <h2 className="text-4xl text-center p-4">Add a New Product</h2>
                 <form onSubmit={handleAddArt}>
                     <div className="md:flex gap-4 mb-4 ">
                         <div className="form-control md:w-1/2">

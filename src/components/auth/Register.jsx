@@ -3,6 +3,8 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
+import { FaSignInAlt } from "react-icons/fa";
+
 
 
 const Register = () => {
@@ -102,9 +104,13 @@ const Register = () => {
                                 <button type="submit" className="btn btn-primary">Register</button>
                             </div>
                             <div>
-                                <p>Already have an account? <Link to='/login'>
-                                    <button className="btn btn-outline btn-success">Login</button>
-                                </Link> </p>
+                                <p>Already have an account?  Please</p>
+                                <Link to='/login'>
+                                    <button className="btn btn-outline w-full mt-4">
+                                        <FaSignInAlt></FaSignInAlt>
+                                        Login
+                                    </button>
+                                </Link>
                             </div>
                         </form>
                     </div>

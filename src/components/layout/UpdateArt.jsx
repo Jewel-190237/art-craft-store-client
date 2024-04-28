@@ -45,10 +45,18 @@ const UpdateArt = () => {
             .then(data => {
                 console.log(data)
                 Swal.fire({
-                    icon: "success",
-                    title: "Art Added Successfully",
-                    showConfirmButton: false,
-                    timer: 2000
+                    title: "Do you want to save the changes?",
+                    showDenyButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: "Save",
+                    denyButtonText: `Don't save`
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        Swal.fire("Saved!", "", "success");
+                    } else if (result.isDenied) {
+                        Swal.fire("Changes are not saved", "", "info");
+                    }
                 });
                 navigate('/myCurt')
 
@@ -63,7 +71,7 @@ const UpdateArt = () => {
                     <div className="md:flex gap-4 ">
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Name</span>
-                            <input type="text" name="product_name" defaultValue={product_name}  className="input input-bordered w-full input-success" />
+                            <input type="text" name="product_name" defaultValue={product_name} className="input input-bordered w-full input-success" />
                         </div>
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Sub Category Name</span>

@@ -49,18 +49,18 @@ const MyCurtDetails = ({ art, arts, setArts }) => {
 
 
     return (
-        <div className="bg-slate-200">
-            <div className="card bg-base-100 shadow-xl mb-4 p-4">
+        <div className="">
+            <div className="card bg-slate-100 shadow-xl mb-4 p-4">
                 <figure><img src={photo_url} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="text-green-600 text-3xl font-bold">
                         {product_name}
-                        <div className="badge badge-secondary">NEW</div>
+                        <div className="badge badge-secondary ml-5">NEW</div>
                     </h2>
-                    <p className="text-green-600 text-2xl">Price: {price}</p>
+                    <p className="text-green-600 text-2xl">Price: <span className="font-bold ml-5"> ${price} </span> </p>
                     <div className="card-actions justify-between ">
-                        <div className="badge badge-outline p-4">Rating: {rating}</div>
-                        <div className="badge badge-outline p-4">Stock Status: {stock_status}</div>
+                        <div className="badge outline outline-green-400 p-4">Rating:<span className="font-bold ml-5"> {rating} </span> </div>
+                        <div className="badge outline outline-green-400 p-4">Stock Status: {stock_status}</div>
                     </div>
                     <hr />
                     <p className="text-green-600 text-xl font-bold">Product Details: </p>

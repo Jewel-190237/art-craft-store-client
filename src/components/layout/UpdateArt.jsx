@@ -68,7 +68,7 @@ const UpdateArt = () => {
     return (
         <div>
             <div className="bg-[#F4F3F0] rounded-xl">
-                <h2 className="text-4xl text-center font-bold p-4">Update an Art</h2>
+            <h2 className="text-3xl text-center p-4 text-green-600 font-bold">Update: {product_name}</h2>
                 <form onSubmit={handleUpdateArt}>
                     <div className="md:flex gap-4 ">
                         <div className="form-control md:w-1/2 p-4">
@@ -101,8 +101,9 @@ const UpdateArt = () => {
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Customization</span>
                             <select className='input input-bordered w-full input-success' name="customization" defaultValue={customization} id="">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
+                                <option value="In Stock">In Stock</option>
+                                <option value="Stock Out">Stock Out</option>
+                                <option value="Made to Order">Made to Order</option>
                             </select>
                         </div>
                         <div className="form-control md:w-1/2 p-4">

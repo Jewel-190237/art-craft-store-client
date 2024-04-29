@@ -14,7 +14,6 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import ErrorPage from './components/layout/ErrorPage';
 import PrivateRoute from './components/provider/PrivateRoute';
-import Profile from './components/layout/Profile';
 import AuthProvider from './components/provider/AuthProvider';
 import AddArt from './components/layout/AddArt';
 import UpdateArt from './components/layout/UpdateArt';
@@ -52,10 +51,6 @@ const router = createBrowserRouter([
       {
         path: '/artDetails/:id',
         element: <PrivateRoute><ArtDetails></ArtDetails></PrivateRoute>
-      },
-      {
-        path: '/profile',
-        element: <PrivateRoute> <Profile></Profile> </PrivateRoute>,
       },
       {
         path: '/addArt',

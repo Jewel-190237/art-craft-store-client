@@ -7,59 +7,66 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 
-const handleDelete = _id => {
-    console.log(_id)
-
-    Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to delete this Art",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            fetch(`http://localhost:5000/delete/${_id}`, {
-                method: 'DELETE',
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                })
-            Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-            });
-        }
-    });
-
-    // const remaining = coffees.filter(cof => cof._id !== _id)
-    // setCoffees(remaining)
-
-}
 
 
-const MyCurtDetails = ({ art }) => {
+
+const MyCurtDetails = ({ art, arts, setArts }) => {
 
     const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = art;
+
+
+    const handleDelete = _id => {
+        console.log(_id)
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to delete this Art",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/delete/${_id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        const remaining = arts.filter(art => art._id !== _id)
+                        setArts(remaining)
+                    })
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
+    }
+
+
 
     return (
         <div className="bg-slate-200">
             <div className="card bg-base-100 shadow-xl mb-4 p-4">
                 <figure><img src={photo_url} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-2xl text-lime-950">
+                    <h2 className="text-green-600 text-3xl font-bold">
                         {product_name}
                         <div className="badge badge-secondary">NEW</div>
                     </h2>
-                    <p className="text-lime-700">Price: {price}</p>
-                    <div className="card-actions justify-center">
-                        <div className="badge badge-outline">Rating: {rating}</div>
-                        <div className="badge badge-outline">Stock Status: {stock_status}</div>
-                        <div className="badge badge-outline">Customization: {customization}</div>
+                    <p className="text-green-600 text-2xl">Price: {price}</p>
+                    <div className="card-actions justify-between ">
+                        <div className="badge badge-outline p-4">Rating: {rating}</div>
+                        <div className="badge badge-outline p-4">Stock Status: {stock_status}</div>
                     </div>
+                    <hr />
+                    <p className="text-green-600 text-xl font-bold">Product Details: </p>
+                    <p className="text-green-600">Sub Category: {sub_category_name}</p>
+                    <p className="text-green-600">Processing Time: {processing_time}</p>
+                    <p className="text-green-600">Customization: {customization}</p>
                     <div className="flex gap-2 justify-between">
                         <Link to={`/UpdateArt/${_id}`} className="btn btn-outline w-1/2 my-2 ">
                             <button className="flex gap-4">

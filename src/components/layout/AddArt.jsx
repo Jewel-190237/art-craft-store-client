@@ -58,7 +58,7 @@ const AddArt = () => {
     return (
         <div>
             <div className="bg-[#F4F3F0] rounded-xl">
-                <h2 className="text-4xl text-center p-4">Add a New Product</h2>
+                <h2 className="text-3xl text-center p-4 text-green-600 font-bold">Add a New Product</h2>
                 <form onSubmit={handleAddArt}>
                     <div className="md:flex gap-4 ">
                         <div className="form-control md:w-1/2 p-4">
@@ -87,7 +87,7 @@ const AddArt = () => {
                             <input type="number" name="rating" placeholder="Enter product rating" className="input input-bordered w-full input-success" />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4">
+                    <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">customization</span>
                             <select className='input input-bordered w-full input-success' name="customization" id="">
@@ -104,8 +104,9 @@ const AddArt = () => {
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">Stock Status</span>
                             <select className='input input-bordered w-full input-success' name="stock_status" id="">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
+                                <option value="In Stock">In Stock</option>
+                                <option value="Stock Out">Stock Out</option>
+                                <option value="Made to Order">Made to Order</option>
                             </select>
                         </div>
                         <div className="form-control md:w-1/2 p-4">
@@ -113,7 +114,7 @@ const AddArt = () => {
                             <input type="text" name="description" placeholder="Enter short description" className="input input-bordered input-success w-full " />
                         </div>
                     </div>
-                    <div className="md:flex gap-4 mb-4">
+                    <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2 p-4">
                             <span className="label-text">User Name</span>
                             <input type="text" name="user_name" placeholder="Enter user name" className="input input-bordered input-success w-full" />

@@ -10,8 +10,8 @@ const AllArts = () => {
     return (
         <div>
             <div>
-                <h2 className="text-3xl font-bold text-center  m-5">All Arts and Crafts</h2>
-                <p className="text-center mx-auto md:w-1/2 mb-10">
+                <h2 className="text-3xl font-bold text-center text-green-700 m-5">All Arts and Crafts</h2>
+                <p className="text-center mx-auto md:w-3/4 mb-10">
                     <p>Explore a vibrant world of creativity with our diverse collection of arts and crafts! From intricate paintings to handcrafted sculptures, and everything in between, our website offers a captivating array of artistic expressions</p> 
                 </p>
             </div>

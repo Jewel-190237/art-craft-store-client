@@ -16,7 +16,6 @@ const Header = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/addArt'>Add Product</NavLink></li>
         {user && <>
-            <li><NavLink to='/profile'>Profile</NavLink></li>
             <li><NavLink to='/myCurt'>My Curt</NavLink></li>
         </>
         }

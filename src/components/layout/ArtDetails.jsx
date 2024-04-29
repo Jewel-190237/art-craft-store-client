@@ -23,54 +23,52 @@ const ArtDetails = () => {
 
     return (
         <div>
+            <div>
+                <h2 className="text-3xl text-center font-bold text-green-600">Product Details of {product_name}</h2>
+                <p className="text-center mx-auto md:w-3/4 mb-10">
+                    <p>Adding to cart is the digital equivalent of placing an item in your shopping basket. Its a simple click or tap that reserves the product for you, allowing you to continue browsing or proceed to checkout whenever you are ready</p>
+                </p>
+            </div>
             <div className="hero ">
-                <div className="hero-content flex md:flex-col lg:flex-row gap-4 mx-auto">
-                    <img className='w-full rounded-3xl bg-[#1313130D]' src={photo_url} />
-                    <div>
-                        <h1 className="text-xl font-bold px-2 pb-2">Name: {product_name}</h1>
-                        <p className="p-2">Title : {sub_category_name}</p>
+                <div className="flex flex-col md:flex-col lg:flex-row w-full">
+                    <div className="w-full">
+                        <img className='w-full rounded-3xl p-3' src={photo_url} />
+                    </div>
+                    <div className="p-3 w-full">
+                        <h1 className="text-xl font-bold p-3 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl ">Product Name: {product_name}</h1>
+                        <p className="m-1 p-2 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl ">Sub Title : {sub_category_name}</p>
                         <hr />
-                        <p className="font-bold p-2">Review: <span className="font-thin">{description}</span></p>
+                        <p className="font-bold text-[#23BE0A] bg-[#23BE0A0D] rounded-xl p-2">Description: <span className="font-thin">{description}</span></p>
                         <hr />
-                        <div className="flex">
-                            <p className="p-2 font-bold">Facilities</p>
-                            <p className="p-2 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl ">#{price}</p>
-                            <p className="p-2 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl">#{rating}</p>
+                        <div>
+                            <p className="p-1 m-1 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl  ">Price: <span className="font-bold pl-11">{price}</span> </p>
+                            <p className="p-1 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl mb-2">Rating: <span className="font-bold pl-10">{rating}</span></p>
+                            
                         </div>
                         <hr />
                         <div >
-                            <div className="flex mt-1">
-                                <p className="mr-16">Location:</p>
-                                <p className="font-bold">{customization}</p>
+                            <div className="p-2 text-[#23BE0A] bg-[#23BE0A0D] rounded-xl w-full">
+                                <div className="flex mt-1 ">
+                                    <p className="mr-12">Customization:</p>
+                                    <p className="font-bold">{customization}</p>
+                                </div>
+                                <div className="flex mt-1 ">
+                                    <p className="mr-14"> Stock Status:</p>
+                                    <p className="font-bold">{stock_status}</p>
+                                </div>
+                                <div className="flex mt-1 ">
+                                    <p className="mr-12">Processing Time</p>
+                                    <p className="font-bold">{processing_time}</p>
+                                </div>
+                                <div className="flex mt-1 ">
+                                    <p className="mr-16">User Name:</p>
+                                    <p className="font-bold">{user_name}</p>
+                                </div>
+                                <div className="flex mt-1 p-2  ">
+                                    <p className="mr-16"> Email:</p>
+                                    <p className="font-bold">{user_email}</p>
+                                </div>
                             </div>
-                            <div className="flex mt-1">
-                                <p className="mr-16">Status:</p>
-                                <p className="font-bold">{stock_status}</p>
-                            </div>
-                            <div className="flex mt-1">
-                                <p className="mr-16">Area:</p>
-                                <p className="font-bold">{processing_time}</p>
-                            </div>
-                            <div className="flex mt-1">
-                                <p className="mr-16">Rating:</p>
-                                <p className="font-bold">{user_name}</p>
-                            </div>
-                            <div className="flex mt-1">
-                                <p className="mr-16">City:</p>
-                                <p className="font-bold">{user_email}</p>
-                            </div>
-                            {/* <div className="flex mt-1">
-                                <p className="mr-16"> Type:</p>
-                                <p className="font-bold">{land.property_type}</p>
-                            </div>
-                            <div className="flex mt-1">
-                                <p className="mr-10">Prices:</p>
-                                <p className="font-bold">{land.price}</p>
-                            </div>
-                            <div className="flex mt-1">
-                                <p className="mr-10">Discount: </p>
-                                <p className="font-bold">{land.discount}</p>
-                            </div> */}
                         </div>
                     </div>
                 </div>

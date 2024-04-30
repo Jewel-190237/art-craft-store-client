@@ -22,7 +22,7 @@ const Banner = () => {
                                         delaySpeed={1000} 
                                     />
                                 </h1>
-                                <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
+                                <p className="mb-5 animate__animated animate__backInRight">Step into a World of Endless Inspiration and Artistic Expression: Delve Deep into the Ancient Craft of Ceramics & Pottery, Where Every Piece Tells a Story and Every Curve Holds History</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
                                 </Link>
@@ -51,7 +51,7 @@ const Banner = () => {
                                     />
                                 
                                 </h1>
-                                <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
+                                <p className="mb-5 animate__animated animate__backInRight">Step into a World of Endless Inspiration and Artistic Expression: Delve Deep into the Ancient Craft of Ceramics & Pottery, Where Every Piece Tells a Story and Every Curve Holds History</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
                                 </Link>
@@ -80,7 +80,7 @@ const Banner = () => {
                                         delaySpeed={1000} 
                                     />
                                 </h1>
-                                <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
+                                <p className="mb-5 animate__animated animate__backInRight">Step into a World of Endless Inspiration and Artistic Expression: Delve Deep into the Ancient Craft of Ceramics & Pottery, Where Every Piece Tells a Story and Every Curve Holds History</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
                                 </Link>
@@ -109,7 +109,7 @@ const Banner = () => {
                                         delaySpeed={1000} 
                                     />
                                 </h1>
-                                <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
+                                <p className="mb-5 animate__animated animate__backInRight">Step into a World of Endless Inspiration and Artistic Expression: Delve Deep into the Ancient Craft of Ceramics & Pottery, Where Every Piece Tells a Story and Every Curve Holds History</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
                                 </Link>

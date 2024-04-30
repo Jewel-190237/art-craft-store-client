@@ -20,6 +20,7 @@ import UpdateArt from './components/layout/UpdateArt';
 import ArtDetails from './components/layout/ArtDetails';
 import AllArts from './components/layout/AllArts';
 import Contact from './components/layout/Contact';
+import Profile from './components/layout/Profile';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: '/addArt',
         element: <PrivateRoute> <AddArt></AddArt> </PrivateRoute>,
+      },  
+      {
+        path: '/profile',
+        element: <PrivateRoute> <Profile></Profile> </PrivateRoute>,
       },  
       {
         path: '/UpdateArt/:id',

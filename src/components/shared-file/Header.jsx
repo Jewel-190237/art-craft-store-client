@@ -58,7 +58,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <Link to='/'>
-                        <a className="btn btn-ghost text-xl">Ideal Properties Ltd</a>
+                        <a className="btn btn-ghost text-xl">Jewel Ceramics Ltd</a>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -86,14 +86,13 @@ const Header = () => {
                                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
 
                                     <Link to='/profile'> <li><a>Profile</a></li> </Link>
-                                    <Link to='/profile'> <li><a>Setting</a></li> </Link>
                                     <li onClick={handleSignOut}><a>Logout</a></li>
                                 </ul>
                             </div>
 
-                            <button onClick={handleSignOut} className="btn"><a id="clickable" className="btn  my-anchor-element">Log Out</a>
+                            <button onClick={handleSignOut} ><a id="clickable" className="btn  my-anchor-element bg-slate-600 text-white outline outline-1 outline-green-700">Log Out</a>
                                 <Tooltip anchorSelect="#clickable" clickable>
-                                    <p className="">Are You sure?</p>
+                                    <p className="">Are You sure to Logout?</p>
                                 </Tooltip></button>
                             {/* <button onClick={handleSignOut} className="btn bg-slate-600 text-white outline outline-1 outline-green-700">Sign Out</button> */}
                             {/* Dark Mode  */}

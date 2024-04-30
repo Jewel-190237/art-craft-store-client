@@ -4,10 +4,14 @@ import { useState } from "react";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { FaSignInAlt } from "react-icons/fa";
+import { useContext } from "react";
+import { authContext } from "../provider/AuthProvider";
 
 
 
 const Register = () => {
+
+    const { createUser } = useContext(authContext)
 
     const [passwordError, setPasswordError] = useState(null)
     const [showPassword, setShowPassword] = useState(false);
@@ -23,7 +27,7 @@ const Register = () => {
         const password = form.get('password');
         const photoUrl = form.get('photoUrl');
         setPasswordError('');
-        console.log(name, photoUrl, email);
+        console.log(name, photoUrl, email, password);
 
         const uppercase = /[A-Z]/.test(password);
         const lowercase = /[a-z]/.test(password);
@@ -36,11 +40,11 @@ const Register = () => {
         }
 
         try {
-            // await createUser(email, password);
+            await createUser(email, password);
 
             Swal.fire({
                 icon: 'success',
-                title: 'Registration successfully Done',
+                title: 'Registration successfully',
                 showConfirmButton: false,
                 timer: 2000
             });

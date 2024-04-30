@@ -88,7 +88,7 @@ const Header = () => {
                                     <li onClick={handleSignOut}><a>Logout</a></li>
                                 </ul>
                             </div>
-                            <button onClick={handleSignOut} className="btn bg-slate-400 text-white outline outline-1 outline-green-700">Sign Out</button>
+                            <button onClick={handleSignOut} className="btn bg-slate-600 text-white outline outline-1 outline-green-700">Sign Out</button>
                             {/* Dark Mode  */}
 
                             <input
@@ -106,7 +106,7 @@ const Header = () => {
                         :
                         <div className="navbar-end gap-3">
                             {/* <img className="w-1/12 rounded-full" src={user1} alt="" /> */}
-                            <Link to='/login'><a className="btn bg-slate-400 text-white outline outline-1 outline-green-700">Login</a></Link>
+                            <Link to='/login'><a className="btn bg-slate-600 text-white outline outline-1 outline-green-700">Login</a></Link>
                         </div>
                 }
             </div>

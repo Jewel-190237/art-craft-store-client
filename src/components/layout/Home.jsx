@@ -12,9 +12,9 @@ import f from "../../assets/16.jpg"
 
 const Home = () => {
 
-    const loadedArts = useLoaderData()
-    const [arts, setArts] = useState(loadedArts)
-    const [dataLength, setDataLength] = useState(6)
+    const loadedArts = useLoaderData();
+    const [arts, setArts] = useState(loadedArts);
+    const [dataLength, setDataLength] = useState(6);
 
 
     return (
@@ -166,7 +166,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

@@ -30,12 +30,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/arts')
+        loader: () => fetch('https://art-and-craft-store-server-roan.vercel.app/arts')
       },
       {
         path: '/allArts',
         element: <AllArts></AllArts>,
-        loader: () => fetch('http://localhost:5000/arts')
+        loader: () => fetch('https://art-and-craft-store-server-roan.vercel.app/arts')
       },
       {
         path: '/myCurt',
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
       {
         path: '/UpdateArt/:id',
         element: <PrivateRoute> <UpdateArt></UpdateArt> </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+        loader: ({ params }) => fetch(`https://art-and-craft-store-server-roan.vercel.app/update/${params.id}`)
       },
     ]
   },

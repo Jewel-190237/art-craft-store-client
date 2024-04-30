@@ -1,4 +1,5 @@
 import 'animate.css';
+import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div>
@@ -8,9 +9,11 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Ideal Properties Ltd</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd</h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
-                                <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                <Link to='/login'>
+                                    <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -24,9 +27,11 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Ideal Properties Ltd</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd</h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
-                                <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                <Link to='/login'>
+                                    <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -40,9 +45,11 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Ideal Properties Ltd</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd</h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
-                                <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                <Link to='/login'>
+                                    <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -55,10 +62,12 @@ const Banner = () => {
                     <div className="hero md:w-full sm:w-full rounded-xl" style={{ backgroundImage: 'url(https://i.ibb.co/nj5GhwL/assortment-elegant-ceramics-stands-arranged-neatly.jpg)' }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
-                        <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Ideal Properties Ltd</h1>
+                            <div className="max-w-md ">
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd </h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
-                                <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                <Link to='/login'>
+                                    <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

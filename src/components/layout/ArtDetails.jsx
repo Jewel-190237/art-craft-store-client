@@ -13,7 +13,7 @@ const ArtDetails = () => {
 
     // const { product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = arts
     useEffect(() => {
-        fetch(`http://localhost:5000/singleArts/${id}`)
+        fetch(`https://art-and-craft-store-server-roan.vercel.app/singleArts/${id}`)
             .then(res => res.json())
             .then(data => {
                 setArt(data)

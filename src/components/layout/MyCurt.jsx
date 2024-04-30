@@ -10,7 +10,7 @@ const MyCurt = () => {
     const [arts, setArts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myCurt/${user.email}`)
+        fetch(`https://art-and-craft-store-server-roan.vercel.app/myCurt/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setArts(data)

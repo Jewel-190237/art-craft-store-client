@@ -37,7 +37,7 @@ const AddArt = () => {
         const newArt = { email, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url }
         console.log(newArt)
 
-        fetch('http://localhost:5000/arts', {
+        fetch('https://art-and-craft-store-server-roan.vercel.app/arts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

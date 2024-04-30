@@ -47,7 +47,7 @@ const UpdateArt = () => {
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/update_art/${_id}`, {
+                fetch(`https://art-and-craft-store-server-roan.vercel.app/update_art/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

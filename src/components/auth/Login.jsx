@@ -10,6 +10,7 @@ import { authContext } from "../provider/AuthProvider";
 import UseTitle from "../layout/UseTitle";
 
 
+
 const Login = () => {
     
     UseTitle('Login')

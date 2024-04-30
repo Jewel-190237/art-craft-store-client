@@ -1,5 +1,7 @@
 import 'animate.css';
 import { Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter'
+
 const Banner = () => {
     return (
         <div>
@@ -9,7 +11,17 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft">   
+                                    <Typewriter
+                                        words={['Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd']}
+                                        loop={5}
+                                        cursor
+                                        cursorStyle='_'
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000} 
+                                    />
+                                </h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
@@ -27,7 +39,18 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> 
+                                <Typewriter
+                                        words={['Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd']}
+                                        loop={5}
+                                        cursor
+                                        cursorStyle='_'
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000} 
+                                    />
+                                
+                                </h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
@@ -45,7 +68,18 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd</h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> 
+                                
+                                <Typewriter
+                                        words={['Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd']}
+                                        loop={5}
+                                        cursor
+                                        cursorStyle='_'
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000} 
+                                    />
+                                </h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>
@@ -63,7 +97,18 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md ">
-                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> Welcome to Jewel Ceramics Ltd </h1>
+                                <h1 className="mb-5 text-5xl font-bold animate__animated animate__backInLeft"> 
+                                
+                                <Typewriter
+                                        words={['Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd', 'Welcome to Jewel Ceramics Ltd']}
+                                        loop={5}
+                                        cursor
+                                        cursorStyle='_'
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000} 
+                                    />
+                                </h1>
                                 <p className="mb-5 animate__animated animate__backInRight">Explore our stunning properties showcased in properties, featuring picturesque views, prime locations, and unmatched investment opportunities. Start your journey towards your dream property today</p>
                                 <Link to='/login'>
                                     <button className="btn btn-primary animate__animated animate__backInUp">Get Started</button>

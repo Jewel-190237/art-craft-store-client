@@ -10,6 +10,7 @@ import d from "../../assets/14.jpg"
 import e from "../../assets/15.jpg"
 import f from "../../assets/16.jpg"
 import UseTitle from "./UseTitle";
+import BreakingNews from "./BreakingNews";
 
 const Home = () => {
     UseTitle('Home')
@@ -21,6 +22,7 @@ const Home = () => {
 
     return (
         <div>
+            <BreakingNews></BreakingNews>
             <Banner></Banner>
             <div className="mt-8">
                 <h2 className="text-3xl text-center font-bold text-green-600">Arts and Crafts</h2>

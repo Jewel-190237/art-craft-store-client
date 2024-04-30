@@ -114,21 +114,21 @@ const Home = () => {
                             {/* <img src={a} alt="Shoes" className="rounded-full w-1/3 " /> */}
                             <div className="radial-progress text-green-600 border-4 border-primary" style={{ "--value": 70 }} role="progressbar">70%</div>
                         </figure>
-                        <h2 className=" font-bold p-4 text-green-600 text-center">Rating 5 out of 5</h2> 
+                        <h2 className=" font-bold p-4 text-green-600 text-center">Rating 5 out of 5</h2>
                     </div>
                     <div className="card bg-base-100 shadow-2xl ">
                         <figure className="px-10 pt-10">
                             {/* <img src={a} alt="Shoes" className="rounded-full w-1/3 " /> */}
                             <div className="radial-progress text-green-600 border-4 border-yellow-600" style={{ "--value": 20 }} role="progressbar">20%</div>
                         </figure>
-                        <h2 className=" font-bold p-4 text-green-600 text-center">Rating 4 out of 5</h2> 
+                        <h2 className=" font-bold p-4 text-green-600 text-center">Rating 4 out of 5</h2>
                     </div>
                     <div className="card bg-base-100 shadow-2xl ">
                         <figure className="px-10 pt-10">
                             {/* <img src={a} alt="Shoes" className="rounded-full w-1/3 " /> */}
                             <div className="radial-progress text-green-600 border-4 border-red-500" style={{ "--value": 10 }} role="progressbar">10%</div>
                         </figure>
-                        <h2 className=" font-bold p-4 text-green-600 text-center">Rating 3 out of 5</h2> 
+                        <h2 className=" font-bold p-4 text-green-600 text-center">Rating 3 out of 5</h2>
                     </div>
                 </div>
             </div>
@@ -143,28 +143,49 @@ const Home = () => {
                 <div className="collapse collapse-plus bg-base-200">
                     <input type="radio" name="my-accordion-3" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                        Click to open this one and close others
+                        What is ceramics?
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>Ceramics refer to objects made from clay that are hardened by heat. Its a broad term that encompasses pottery, porcelain, earthenware, and other related materials.</p>
                     </div>
                 </div>
                 <div className="collapse collapse-plus bg-base-200">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-xl font-medium">
-                        Click to open this one and close others
+                        What is pottery?
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>Pottery specifically refers to objects made from clay that are shaped and then fired in a kiln to harden. It includes items like bowls, cups, plates, and vases.</p>
                     </div>
                 </div>
                 <div className="collapse collapse-plus bg-base-200">
                     <input type="radio" name="my-accordion-3" />
                     <div className="collapse-title text-xl font-medium">
-                        Click to open this one and close others
+                        How do you care for pottery?
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>Pottery should be handled with care to avoid chipping or breaking. It can be washed by hand with mild soap and water, but avoid soaking it for prolonged periods. Its also best to avoid exposing pottery to extreme temperature changes.
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" />
+                    <div className="collapse-title text-xl font-medium">
+                    Can pottery be food-safe?
+                    </div>
+                    <div className="collapse-content">
+                        <p>Yes, pottery can be made food-safe by using lead-free glazes and firing it to the appropriate temperature. However, not all pottery is food-safe, so its essential to check with the maker or manufacturer if you are unsure.
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" />
+                    <div className="collapse-title text-xl font-medium">
+                    How do you choose the right glaze for pottery?
+                    </div>
+                    <div className="collapse-content">
+                        <p>The choice of glaze depends on various factors such as the type of clay used, desired finish (matte, glossy, textured), and firing temperature. Experimentation and testing are often necessary to achieve the desired results.
+                        </p>
                     </div>
                 </div>
             </div>

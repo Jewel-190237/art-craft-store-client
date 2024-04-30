@@ -19,6 +19,7 @@ import AddArt from './components/layout/AddArt';
 import UpdateArt from './components/layout/UpdateArt';
 import ArtDetails from './components/layout/ArtDetails';
 import AllArts from './components/layout/AllArts';
+import Contact from './components/layout/Contact';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>,
       },
       {
         path: '/artDetails/:id',

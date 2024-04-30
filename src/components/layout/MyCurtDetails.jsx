@@ -6,11 +6,13 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import UseTitle from "./UseTitle";
 
 
 
 
 const MyCurtDetails = ({ art, arts, setArts }) => {
+    UseTitle('My Curt Details')
 
     const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = art;
 

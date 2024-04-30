@@ -2,9 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { authContext } from "../provider/AuthProvider";
 import MyCurtDetails from "./MyCurtDetails";
 import { Link } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const MyCurt = () => {
-
+    UseTitle('My Curt')
     const { user } = useContext(authContext);
     const [arts, setArts] = useState([]);
 

@@ -9,8 +9,10 @@ import c from "../../assets/13.jpg"
 import d from "../../assets/14.jpg"
 import e from "../../assets/15.jpg"
 import f from "../../assets/16.jpg"
+import UseTitle from "./UseTitle";
 
 const Home = () => {
+    UseTitle('Home')
 
     const loadedArts = useLoaderData();
     const [arts, setArts] = useState(loadedArts);

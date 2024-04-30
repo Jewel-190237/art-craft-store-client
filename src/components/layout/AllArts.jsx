@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const AllArts = () => {
+    UseTitle('All Arts');
 
     const loadedArts = useLoaderData();
     const [arts, setArts] = useState(loadedArts);

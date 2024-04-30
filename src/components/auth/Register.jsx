@@ -6,10 +6,12 @@ import 'sweetalert2/dist/sweetalert2.css';
 import { FaSignInAlt } from "react-icons/fa";
 import { useContext } from "react";
 import { authContext } from "../provider/AuthProvider";
+import UseTitle from "../layout/UseTitle";
 
 
 
 const Register = () => {
+    UseTitle('Register')
 
     const { createUser } = useContext(authContext)
 

@@ -7,9 +7,12 @@ import { TiUserAdd } from "react-icons/ti";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { authContext } from "../provider/AuthProvider";
+import UseTitle from "../layout/UseTitle";
 
 
 const Login = () => {
+    
+    UseTitle('Login')
 
     const location = useLocation();
     const naviGate = useNavigate();

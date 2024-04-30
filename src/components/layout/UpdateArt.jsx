@@ -4,11 +4,14 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 
 import { useLoaderData, useNavigate } from "react-router-dom";
+import UseTitle from './UseTitle';
 
 const UpdateArt = () => {
+    
+    UseTitle('Update Arts');
 
-    const arts = useLoaderData()
-    const navigate = useNavigate()
+    const arts = useLoaderData();
+    const navigate = useNavigate();
 
     const { _id, product_name, sub_category_name, price, rating, customization, processing_time, stock_status, description, user_name, user_email, photo_url } = arts
 

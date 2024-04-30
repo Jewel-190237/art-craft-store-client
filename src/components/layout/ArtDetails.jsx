@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import UseTitle from "./UseTitle";
 
 const ArtDetails = () => {
+    UseTitle('Art Details')
     const { id } = useParams()
     console.log(id)
 

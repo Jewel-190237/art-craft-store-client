@@ -4,8 +4,11 @@ import 'sweetalert2/src/sweetalert2.scss'
 import { useContext } from 'react';
 import { authContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import UseTitle from './UseTitle';
 
 const AddArt = () => {
+
+    UseTitle('Add Arts')
 
     const navigate = useNavigate()
 

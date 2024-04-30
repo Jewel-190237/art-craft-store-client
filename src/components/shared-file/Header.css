@@ -1,0 +1,19 @@
+.dark_mode_input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.dark_mode_input:checked + .dark_mode_label {
+    background: #242424;
+}
+.dark_mode_input:checked + .dark_mode_label:after {
+    left: 62px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.dark_mode_input:checked + .dark_mode_label svg.sun {
+    fill: #7e7e7e;
+}
+.dark_mode_input:checked + .dark_mode_label svg.moon {
+    fill: #fff;
+}

@@ -13,11 +13,11 @@ const ArtCard = ({ art }) => {
             <div className="card  bg-base-100 shadow-xl">
                 <figure><img src={photo_url} alt="Product" /></figure>
                 <div className="card-body">
-                    <h2 className="text-green-600 text-3xl font-bold">
+                    <h2 className="text-green-600 text-2xl font-bold">
                         {product_name}
-                        <div className="badge badge-secondary">NEW</div>
                     </h2>
-                    <p className="text-green-600 text-2xl">Price: <span className="font-bold ml-5">{price}</span></p>
+                    <p className="text-green-600 text-xl mb-4 font-semibold">Price: <span className="font-semibold ml-5"> ${price}</span></p>
+                    <hr />
                     <div className="card-actions justify-between ">
                         <div className="badge outline outline-green-400 p-4">Rating: <span className="font-bold ml-5">{rating}</span></div>
                         <div className="badge outline outline-green-400 p-4">Stock Status: <span className="font-bold ml-5">{stock_status}</span> </div>

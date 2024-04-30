@@ -30,7 +30,7 @@ const ArtDetails = () => {
                 </p>
             </div>
             <div className="hero ">
-                <div className="flex flex-col md:flex-col lg:flex-row w-full">
+                <div className="flex flex-col md:flex-col lg:flex-row w-full gap-8">
                     <div className="w-full">
                         <img className='w-full rounded-3xl p-3' src={photo_url} />
                     </div>

@@ -89,7 +89,7 @@ const AddArt = () => {
                     </div>
                     <div className="md:flex gap-4">
                         <div className="form-control md:w-1/2 p-4">
-                            <span className="label-text">customization</span>
+                            <span className="label-text">Customization</span>
                             <select className='input input-bordered w-full input-success' name="customization" id="">
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>

@@ -58,13 +58,13 @@ const Register = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className=" min-h-screen bg-base-200 rounded-xl mb-8">
                 <div className="hero-content flex-col">
                     <div className="text-center">
-                        <h1 className="text-3xl font-bold">Register Your Account</h1>
+                        <h1 className="text-3xl font-bold">Register Now</h1>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleRegister} className="card-body">
+                    <div className="md:w-1/3 w-full shadow-2xl bg-base-100 rounded-2xl" >
+                        <form onSubmit={handleRegister} className="card-body rounded-2xl">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -90,7 +90,7 @@ const Register = () => {
                                 <div className="flex">
                                     <input
                                         type={showPassword ? "text" : "password"}
-                                        name="password" placeholder="Password" className="input border-slate-300 pr-16" required />
+                                        name="password" placeholder="Password" className="input w-full border-slate-300 pr-16" required />
                                     <span onClick={() => setShowPassword(!showPassword)} className="mt-4 -ml-5">
                                         {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                                     </span>
@@ -101,12 +101,12 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button type="submit" className="btn btn-primary">Register</button>
+                                <button type="submit" className="btn bg-green-700 text-white">Register</button>
                             </div>
                             <div>
                                 <p>Already have an account?  Please</p>
                                 <Link to='/login'>
-                                    <button className="btn btn-outline w-full mt-4">
+                                    <button className="btn btn-outline w-full mt-4 text-green-700">
                                         <FaSignInAlt></FaSignInAlt>
                                         Login
                                     </button>

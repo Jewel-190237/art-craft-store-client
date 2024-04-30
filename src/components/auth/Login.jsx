@@ -90,13 +90,13 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className=" min-h-screen bg-base-200 rounded-2xl mb-8">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
-                        <h1 className="text-3xl font-bold">Login Your Account</h1>
+                        <h1 className="text-3xl font-bold text-green-600">Login Now</h1>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleSignIn} className="card-body">
+                    <div className="md:w-1/3 w-full  shadow-2xl bg-base-100 rounded-2xl">
+                        <form onSubmit={handleSignIn} className="card-body rounded-2xl">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -110,8 +110,8 @@ const Login = () => {
                                 <div className="flex">
                                     <input
                                         type={showPassword ? "text" : "password"}
-                                        name="password" placeholder="Password" className="input border-slate-300 pr-16" required />
-                                    <span onClick={() => setShowPassword(!showPassword)} className="mt-4 -ml-5">
+                                        name="password" placeholder="Password" className="input w-full border-slate-300 pr-16" required />
+                                    <span onClick={() => setShowPassword(!showPassword)} className="mt-4 -ml-5 ">
                                         {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                                     </span>
                                 </div>
@@ -120,17 +120,17 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn bg-green-700 text-white">Login</button>
                             </div>
                             <div>
                                 <p className="text-center"> or <br /> Continue with</p>
                             </div>
                             <div>
-                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-full my-2">
+                                <button onClick={handlesSignInWithGoogle} className="btn btn-outline w-full my-2  text-green-700">
                                     <FaGoogle></FaGoogle>
                                     Google
                                 </button>
-                                <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-full">
+                                <button onClick={handlesSignInWithGitHub} className="btn btn-outline w-full  text-green-700">
                                     <FaGithub></FaGithub>
                                     gitHub
                                 </button>
@@ -138,7 +138,7 @@ const Login = () => {
                             <div>
                                 <p className="text-center">New Here ? please </p>
                                 <Link to='/register'>
-                                    <button className="btn btn-outline w-full mt-2">
+                                    <button className="btn btn-outline w-full mt-2  text-green-700">
                                         <TiUserAdd className="text-xl"></TiUserAdd>
                                         Register
                                     </button>

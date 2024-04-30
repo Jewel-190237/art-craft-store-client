@@ -14,6 +14,7 @@ const Home = () => {
 
     const loadedArts = useLoaderData()
     const [arts, setArts] = useState(loadedArts)
+    const [dataLength, setDataLength] = useState(6)
 
 
     return (
@@ -28,7 +29,7 @@ const Home = () => {
 
             <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
                 {
-                    arts.map(art => <ArtCard key={art._id} art={art}></ArtCard>)
+                    arts.slice(0, dataLength).map(art => <ArtCard key={art._id} art={art}></ArtCard>)
                 }
 
             </div>

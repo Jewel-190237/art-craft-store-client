@@ -20,9 +20,9 @@ const MyCurt = () => {
         <div>
             <h2 className="text-3xl text-center font-bold text-green-600">My Curt</h2>
             <p className="text-center mx-auto md:w-3/4 mb-10">
-                <p>Adding to cart is the digital equivalent of placing an item in your shopping basket. Its a simple click or tap that reserves the product for you, allowing you to continue browsing or proceed to checkout whenever you are ready</p>
+                <p>Welcome to Curt, your one-stop platform for creating personalized pages effortlessly. Customize your space with images, text, and links to share your story or showcase your work. Get started in seconds and make your online presence shine with Curt.</p>
             </p>
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
                 {
                     arts.map(art => <MyCurtDetails
                         key={art._id}
